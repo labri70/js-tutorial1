@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-Basic(08)</title>
+  <style>
+    body{padding: 20px;}
+    p{margin-bottom: 30px;}
+    pre{background-color: #f2f2f2;}
+    hr{margin: 50px 0;}
+  </style>
+
+</head>
+<body>
+
+  <h1>JS-Basic(08) - 변수 유효범위</h1>
+  
+
+  <hr>
+
+  <a href="/">Back</a>
+
+
+  <script>
+    // 변수 유효범위(Variable Scope) : 변수가 유효하게 동작하는 범위
+    // var, let, const
+
+    function scope(){
+      if(true){
+        var a = 123;
+      }
+      console.log(a);   // scope를 벗어나도 에러가 안남!    <= 'var' 함수레벨의 유효범위를 가짐. 범위를 더 크게 가지게 되고, 의도하지 않은 범위에서 사용될 수도 있고, 그만큼의 메모리를 차지하고 있고, 개발자가 확인하지 못하는 메모리 누수를 발생시킬수도 있기에 사용을 권장하지 않음!
+    }
+
+    scope();
+
+    function scope(){
+      if(true){
+        const a = 123;
+        console.log(a);   // scope 안에 있어 에러가 나지 않음!
+      }
+      // console.log(a);   // scope를 벗어나 에러가 남!      <= 'let, const'는 블록레벨의 유효범위를 가짐. 블록레벨의 범위안에서 동작하도록 해주는 것이 여러모로 관리에 효과적이므로 사용을 권장함!  
+    }
+
+    scope();
+
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-Basic(01)</title>
+
+  <style>
+    body{padding: 20px;}
+    p{margin-bottom: 30px;}
+    pre{background-color: #f2f2f2;}
+    hr{margin: 50px 0;}
+  </style>
+
+  <script src="../js/getType.js"></script>
+  <!-- <script src="../js/main.js"></script> -->
+  <script src="../js/test1.js"></script>
+</head>
+<body>
+
+  <h1>JS-Basic(01) - Data Type</h1>  
+
+  <p>
+    자바스크립트의 null은 '의도적으로 값이 없음'을 명시하기 위한 기본 데이터 타입이다.<br>   
+    타입도 null이며, 값도 null인 Primitive Type이다. 즉, null은 객체가 아닙니다! (기본 타입입니다!)<br>  
+    null은 객체가 아닌 원시 자료형임에도 type을 찍어보면 object로 나오는데,
+    이는 자바스크립트를 처음 구현할 때 발생한 버그라고 합니다.<br>  → 이는 typeof를 구현한 코드에 null을 체크하는 항목을 누락해서 발생한 버그입니다.
+  </p>
+
+  <!-- # typeof 수정 제안에 대한 답변
+
+    1. 결론 : 'Reject'(거절)
+    This proposal has been rejected. 
+  
+    2. 이유 :
+    이미 수많은 사이트들의 코드가 기존의 typeof로 작성되어 있어서, 고치면 위험하다.
+    이건 '하나의 자바스크립트'라는 정신에 맞지 않는다.
+
+    It was implemented in V8 but it turned out that it broke a lot of existing sites.
+    In the spirit of One JavaScript this is not feasible.
+
+    원문 참고 : archive.is/sPyGA#selection-107.1-107.169
+
+   -->
+  
+  <h2>그럼 null 타입 체크는 어떻게 하면 좋을까?</h2>
+
+  <p>
+    # null 타입 체크 방법? 
+    일치 연산자 (===)을 쓰는게 좋습니다. 일치 연산자는 값과 타입이 동일할 때에만 true를 반환합니다.
+  </p>
+
+  <pre>
+    <code>
+      var null_02 = null;
+      null_02 === null;   // true</code>
+  </pre>    
+
+  <p>
+    자바스크립트의 null은 객체가 아닌 기본타입 이며,
+    타입체크는 일치연산자(===)로 하는게 좋다는 걸 기억해두면 좋겠다.
+  </p>
+
+
+  <hr>
+
+  <a href="/">Back</a>
+  
+</body>
+</html>

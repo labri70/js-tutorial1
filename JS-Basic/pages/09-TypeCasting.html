@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-Basic(09)</title>
+  <style>
+    body{padding: 20px;}
+    p{margin-bottom: 30px;}
+    pre{background-color: #f2f2f2;}
+    hr{margin: 50px 0;}
+  </style>
+</head>
+<body>
+
+  <h1>JS-Basic(09) - 형 변환</h1> 
+  
+
+  <hr>
+
+  <a href="/">Back</a>  
+
+  <script>
+
+    // 형 변환(Type conversion)
+    const a = 1;
+    const b = "1";
+
+    console.log(a == b);  // 형변환이 일어날 수도 있어서 사용을 권장하지는 않습니다. 가능하면 '===' 사용을 권장합니다.
+
+
+    // Truthy(참 같은 값)
+    // true, {}, [], 1, 2, 'false', -12, '3.14'...
+
+    // Falsy(거짓 같은 값)   <= 거짓 값들이 갯수가 적으므로 기억해두세요! 
+    // false, '', null, nudefined, 0, -0, NaN(Not A Number : 숫자처럼 보이나 숫자가 아닌 데이터)
+
+    if(true){                     // 참일 때 출력
+      console.log(123);   
+    }
+
+    if(false){                     // 거짓일 때 출력안됨
+      console.log(456);
+    }
+
+    if('false'){                   // 문자일 때 출력됨
+      console.log(456);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+  
+</body>
+</html>

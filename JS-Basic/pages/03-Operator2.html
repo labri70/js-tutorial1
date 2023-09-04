@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-Basic(03)</title>
+  <style>
+    body{padding: 20px;}
+    p{margin-bottom: 30px;}
+    pre{background-color: #f2f2f2;}
+    hr{margin: 50px 0;}
+  </style>
+</head>
+<body>
+
+  <h1>JS-Basic(03) - 비교, 논리 연산자</h1>
+  
+
+  <hr>
+
+  <a href="/">Back</a>
+
+
+  <script>
+    // 비교 연산자(comparison operator)
+
+    const a = 1;
+    const b = 3;
+
+    console.log(a === b);
+
+
+    function isEqual(x, y){
+      return x === y;
+    }
+
+    console.log(isEqual(1, 1));           // true
+    console.log(isEqual(2, "2"));         // false
+
+
+    const c = 1;
+    const d = 3;
+
+    console.log(c !== d);                   // true   <=   '!' 는 부정연산자로 반대값 출력
+
+    console.log(c < d);                     // true
+    console.log(c > d);                     // false 
+
+
+    const e = 3;
+    const f = 3;
+
+    console.log(e > f);                     // false 
+    console.log(e >= f);                    // true    <= 둘중 하나라도 참일 경우 true 반환
+    console.log(e <= f);                    // true 
+
+
+
+    // 논리 연산자(logical operator)
+    const n1 = 1 === 1;                      // true
+    const n2 = 'AB' === 'AB';                // true
+    const n3 = true;                         // true
+    const n4 = false;                        // false
+
+    console.log(n1);
+    console.log(n2);
+    console.log(n3);
+
+    console.log("and 연산자 : ", n1 && n2 && n3);            // true       <= and 연산자 : 모두가 참일 경우만 true 반환
+    console.log("or 연산자 : ", n1 || n2 || n4);             // true       <= or 연산자 : 하나라도 참일 경우 true 반환
+    console.log("not 연산자 : ", !n3);                       // false      <= NOT(!) 연산자 :  반대값 반환
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-Basic(07)</title>
+  <style>
+    body{padding: 20px;}
+    p{margin-bottom: 30px;}
+    pre{background-color: #f2f2f2;}
+    hr{margin: 50px 0;}
+  </style>
+
+</head>
+<body>
+
+  <h1>JS-Basic(07) - 반복문 For</h1>
+  
+  <ul></ul>
+
+  <hr>
+
+  <a href="/">Back</a>
+
+
+
+  <script>
+    // 반복문 (For statement)
+    // for(시작조건; 종료조건; 변화조건){}
+
+    const ulEl = document.querySelector('ul');
+    console.log(ulEl);
+
+    // for(let i=0; i<3; i++){
+    //   const li = document.createElement('li');
+    //   li.textContent = `list-${i+1}`;
+    //   ulEl.appendChild(li);
+    // }
+
+
+    // for(let i=0; i<10; i++){
+    //   const li = document.createElement('li');
+    //   li.textContent = `list-${i+1}`;
+    //   if(i % 2 === 0){   // 짝수만 출력
+    //     li.addEventListener('click', function(){
+    //       console.log(li.textContent);
+    //     })
+    //   }
+    //   ulEl.appendChild(li);
+    // }
+
+
+    for(let i=0; i<10; i++){
+      const li = document.createElement('li');
+      li.textContent = `list-${i+1}`;
+      if((i+1) % 2 === 0){   // 짝수만 출력
+        li.addEventListener('click', function(){
+          console.log(li.textContent);
+        })
+      }
+      ulEl.appendChild(li);
+    }
+
+  </script>
+  
+</body>
+</html>
